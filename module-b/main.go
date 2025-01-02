@@ -23,7 +23,7 @@ type ModuleB struct{}
 
 // Returns a container that echoes whatever string argument is provided
 func (m *ModuleB) ContainerEcho(stringArg string) *dagger.Container {
-	return dag.Container().From("alpine:latest").WithExec([]string{"echo", stringArg}), nil
+	return dag.Container().From("alpine:latest").WithExec([]string{"echo", stringArg})
 }
 
 // Returns lines that match a pattern in the files of the provided Directory
